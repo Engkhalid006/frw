@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Watch - المشغل</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">الرئيسية</a>
+    <a href="movies.html">الأفلام</a>
+    <a href="series.html">المسلسلات</a>
+    <a href="anime.html">الأنمي</a>
+  </div>
+
+  <div class="player-container">
+    <video id="video-player" controls>
+      <source src="sample.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو.
+    </video>
+    <div class="player-controls">
+      <button onclick="rewind10()">⏪ 10 ثواني</button>
+      <button onclick="forward10()">⏩ 10 ثواني</button>
+      <select id="quality-select">
+        <option>جودة 1080p</option>
+        <option>جودة 720p</option>
+        <option>جودة 480p</option>
+      </select>
+      <button onclick="nextEpisode()">الحلقة التالية</button>
+    </div>
+  </div>
+
+  <footer>
+    <p class="site-note">
+      ⚠️ جميع المحتويات مأخوذة من موقع faselhd1watch.one وجميع الحقوق محفوظة لأصحابها.
+    </p>
+  </footer>
+
+  <script>
+    function rewind10() {
+      const player = document.getElementById('video-player');
+      player.currentTime -= 10;
+    }
+
+    function forward10() {
+      const player = document.getElementById('video-player');
+      player.currentTime += 10;
+    }
+
+    function nextEpisode() {
+      alert("انتقل إلى الحلقة التالية!");
+    }
+  </script>
+</body>
+</html>
